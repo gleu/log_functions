@@ -11,7 +11,7 @@
 	"provides": {
 		"log_functions": {
 			"file": "log_functions.so",
-			"version": "0.4.0"
+			"version": "0.0.1"
 		}
 	},
 	"meta-spec": {
