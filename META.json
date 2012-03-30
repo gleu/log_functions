@@ -1,0 +1,36 @@
+{
+	"name": "log_functions",
+	"abstract": "Module to log functions",
+	"description": "log_functions is a PostgreSQL module that logs each function executed.",
+	"version": "0.1.0",
+	"maintainer": "Guillaume Lelarge <guillaume@lelarge.info>",
+	"license": {
+		"PostgreSQL": "http://www.postgresql.org/about/licence"
+	},
+	"release_status": "unstable",
+	"provides": {
+		"log_functions": {
+			"file": "log_functions.so",
+			"version": "0.4.0"
+		}
+	},
+	"meta-spec": {
+		"version": "1.0.0",
+		"url": "http://pgxn.org/meta/spec.txt"
+	},
+	"tags": [
+		"function",
+		"stored procedure",
+		"log"
+	],
+    "resources": {
+        "bugtracker": {
+            "web": "https://github.com/gleu/log_functions/issues"
+        },
+        "repository": {
+            "type": "git",
+            "url": "git://github.com/gleu/log_functions.git",
+            "web": "https://gleu@github.com/gleu/log_functions.git"
+        }
+    }
+}

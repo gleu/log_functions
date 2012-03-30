@@ -1,0 +1,40 @@
+log_functions Install
+=====================
+
+To install log_functions, you can untar the log_functions tarball
+anywhere you want.
+
+You'll need to compile it. There are two ways to do that:
+
+* In the PostgreSQL source code directory, inside the contrib sub-directory
+
+  Put the log_functions source directory inside the contrib subdirectory
+  of PostgreSQL.
+  Do "make", then "make install"
+
+* Using pgxs
+
+  Do "make USE_PGXS=1", then "make USE_PGXS=1 install"
+
+Once it's installed, you'll need to configure PostgreSQL to make use of it:
+
+* shared_preload_libraries='log_functions'
+* custom_variable_classes
+
+There are five optional parameters that allow you to select which logs you want:
+
+* log_functions.log_declare
+* log_functions.log_function_begin
+* log_functions.log_function_end
+* log_functions.log_statement_begin
+* log_functions.log_statement_end
+
+Once the configuration is done, restart PostgreSQL.
+
+You can also decide to use it only from time to time. If you want to do that,
+you don't need to configure PostgreSQL. When you want to use it, simply execute
+the following SQL statement:
+
+  LOAD 'log_functions';
+
+Then, you will be able to set the five optional parameters.

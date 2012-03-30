@@ -1,0 +1,15 @@
+log_functions is a PostgreSQL module that logs each function executed.
+
+Many things can be logged:
+* the DECLARE statement,
+* the BEGIN statement,
+* the END statement,
+* and the start and end of each statement in the BEGIN/END block of a function.
+
+There are five optional parameters that allow you to select which logs you want:
+
+* log_functions.log_declare
+* log_functions.log_function_begin
+* log_functions.log_function_end
+* log_functions.log_statement_begin
+* log_functions.log_statement_end
