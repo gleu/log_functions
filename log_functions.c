@@ -10,6 +10,9 @@
 
 #include <stdio.h>
 #include "postgres.h"
+#if PG_VERSION_NUM >= 90300
+#include "access/htup_details.h"
+#endif
 #include "utils/syscache.h"
 #include "catalog/pg_proc.h"
 #include "plpgsql.h"
