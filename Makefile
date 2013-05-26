@@ -1,5 +1,3 @@
-# contrib/log_functions/Makefile
-
 MODULE_big = log_functions
 OBJS = log_functions.o
 
