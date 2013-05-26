@@ -2,16 +2,16 @@
 	"name": "log_functions",
 	"abstract": "Module to log functions",
 	"description": "log_functions is a PostgreSQL module that logs each function executed.",
-	"version": "0.5.0",
+	"version": "1.0.0",
 	"maintainer": "Guillaume Lelarge <guillaume@lelarge.info>",
 	"license": {
 		"PostgreSQL": "http://www.postgresql.org/about/licence"
 	},
-	"release_status": "unstable",
+	"release_status": "stable",
 	"provides": {
 		"log_functions": {
 			"file": "log_functions.so",
-			"version": "0.5.0"
+			"version": "1.0.0"
 		}
 	},
 	"meta-spec": {
