@@ -221,7 +221,7 @@ static void profiler_stmt_end( PLpgSQL_execstate * estate, PLpgSQL_stmt * stmt )
 
 char *decode_stmt_type(int typ)
 {
-	char *decoded_type = "";
+	char *decoded_type = "unknown";
 
     switch (typ)
     {    
@@ -312,9 +312,6 @@ char *decode_stmt_type(int typ)
         case PLPGSQL_STMT_CLOSE:
             decoded_type = "CLOSE";
             break;
-
-        default:
-            sprintf(decoded_type, "unkown (%d)", typ);
     }
 
     return decoded_type;
