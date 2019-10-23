@@ -202,7 +202,7 @@ static void profiler_func_end( PLpgSQL_execstate * estate, PLpgSQL_function * fu
 static void profiler_stmt_beg( PLpgSQL_execstate * estate, PLpgSQL_stmt * stmt )
 {
 	if (log_functions_log_statement_begin)
-		elog(LOG, "log_functions, STMT START, %s, line %d, type %s", findProcName(estate->func->fn_oid), stmt->lineno, decode_stmt_type(stmt->cmd_type));
+		elog(LOG, "log_functions, STMT START, %s - line %d - type %s", findProcName(estate->func->fn_oid), stmt->lineno, decode_stmt_type(stmt->cmd_type));
 }
 
 /* -------------------------------------------------------------------
@@ -212,7 +212,7 @@ static void profiler_stmt_beg( PLpgSQL_execstate * estate, PLpgSQL_stmt * stmt )
 static void profiler_stmt_end( PLpgSQL_execstate * estate, PLpgSQL_stmt * stmt )
 {
 	if (log_functions_log_statement_end)
-		elog(LOG, "log_functions, STMT STOP, %s, line %d, type %s", findProcName(estate->func->fn_oid), stmt->lineno, decode_stmt_type(stmt->cmd_type));
+		elog(LOG, "log_functions, STMT STOP, %s - line %d - type %s", findProcName(estate->func->fn_oid), stmt->lineno, decode_stmt_type(stmt->cmd_type));
 }
 
 /* -------------------------------------------------------------------
