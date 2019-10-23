@@ -233,14 +233,6 @@ char *decode_stmt_type(int typ)
             decoded_type = "ASSIGN";
             break;
 
-        case PLPGSQL_STMT_PERFORM:
-            decoded_type = "PERFORM";
-            break;
-
-        case PLPGSQL_STMT_GETDIAG:
-            decoded_type = "GETDIAG";
-            break;
-
         case PLPGSQL_STMT_IF:
             decoded_type = "IF";
             break;
@@ -269,6 +261,12 @@ char *decode_stmt_type(int typ)
             decoded_type = "FORC";
             break;
 
+#if PG_VERSION_NUM >= 90100
+        case PLPGSQL_STMT_FOREACH_A:
+            decoded_type = "FOREACH A";
+            break;
+#endif
+
         case PLPGSQL_STMT_EXIT:
             decoded_type = "EXIT";
             break;
@@ -289,6 +287,12 @@ char *decode_stmt_type(int typ)
             decoded_type = "RAISE";
             break;
 
+#if PG_VERSION_NUM >= 90500
+        case PLPGSQL_STMT_ASSERT:
+            decoded_type = "ASSERT";
+            break;
+#endif
+
         case PLPGSQL_STMT_EXECSQL:
             decoded_type = "EXEC SQL";
             break;
@@ -299,6 +303,10 @@ char *decode_stmt_type(int typ)
 
         case PLPGSQL_STMT_DYNFORS:
             decoded_type = "DYNFORS";
+            break;
+
+        case PLPGSQL_STMT_GETDIAG:
+            decoded_type = "GETDIAG";
             break;
 
         case PLPGSQL_STMT_OPEN:
@@ -312,6 +320,28 @@ char *decode_stmt_type(int typ)
         case PLPGSQL_STMT_CLOSE:
             decoded_type = "CLOSE";
             break;
+
+        case PLPGSQL_STMT_PERFORM:
+            decoded_type = "PERFORM";
+            break;
+
+#if PG_VERSION_NUM >= 110000
+        case PLPGSQL_STMT_CALL:
+            decoded_type = "CALL";
+            break;
+
+        case PLPGSQL_STMT_COMMIT:
+            decoded_type = "COMMIT";
+            break;
+
+        case PLPGSQL_STMT_ROLLBACK:
+            decoded_type = "ROLLBACK";
+            break;
+
+        case PLPGSQL_STMT_SET:
+            decoded_type = "SET";
+            break;
+#endif
     }
 
     return decoded_type;
