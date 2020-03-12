@@ -34,7 +34,7 @@ There are five optional parameters that allow you to select which logs you want:
 * log_functions.log_statement_end
 
 By default, only log_functions.log_statement_begin, and
-log_functions.log_statement_begin are off. The other parameters are on.
+log_functions.log_statement_end are off. The other parameters are on.
 
 Once the configuration is done, restart PostgreSQL.
 
