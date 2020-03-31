@@ -4,7 +4,7 @@
  *  Log steps and/or statements inside a PL/pgsql function.
  *
  *
- *  Copyright (c) 2011-2019, Guillaume Lelarge (Dalibo),
+ *  Copyright (c) 2011-2020, Guillaume Lelarge (Dalibo),
  *  guillaume.lelarge@dalibo.com
  *
  *-------------------------------------------------------------------------
