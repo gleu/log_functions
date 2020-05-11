@@ -14,7 +14,8 @@ PostgreSQL release:
     * do "make", then "make install"
 
   * PostgreSQL 9.2 and newer
-    * do "make USE_PGXS=1", then "make USE_PGXS=1 install"
+    * you need pg_config in your PATH
+    * do "make", then "make install"
 
 You can also compile log_functions on Windows. You'll need to use the
 build.bat script, that you will find in the src/tools/msvc directory of the

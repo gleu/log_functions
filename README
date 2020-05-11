@@ -13,3 +13,5 @@ There are five optional parameters that allow you to select which logs you want:
 * log_functions.log_function_end
 * log_functions.log_statement_begin
 * log_functions.log_statement_end
+
+See the INSTALL file for installation and usage informations.
