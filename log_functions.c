@@ -130,6 +130,13 @@ void _PG_init( void )
 #endif
 							 NULL,
 							 NULL);
+
+  /* Reserve the GUC prefix */
+#if PG_VERSION_NUM < 150000
+  EmitWarningsOnPlaceholders("log_functions");
+#else
+  MarkGUCPrefixReserved("log_functions");
+#endif
 }
 
 /* -------------------------------------------------------------------
