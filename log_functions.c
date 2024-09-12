@@ -345,9 +345,12 @@ char *decode_stmt_type(int typ)
             decoded_type = "ROLLBACK";
             break;
 
+#if PG_VERSION_NUM < 140000
         case PLPGSQL_STMT_SET:
             decoded_type = "SET";
             break;
+#endif
+
 #endif
     }
 
